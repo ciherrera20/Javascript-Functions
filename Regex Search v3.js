@@ -107,16 +107,16 @@ javascript:(function(){
 	var keys = {ctrl: false, shift: false}; 
 	
 	window.addEventListener("keyup", function(e){
-		if(e.keyCode === 16)
+		if(e.shiftKey)
 			keys.shift = false;
-		if(e.keyCode === 17)
+		if(e.ctrlKey)
 			keys.ctrl = false;
 	});
 	
 	window.addEventListener("keydown", function(e) {
-		if(e.keyCode === 16)
+		if(e.shiftKey)
 			keys.shift = true;
-		if(e.keyCode === 17)
+		if(e.ctrlKey)
 			keys.ctrl = true;
 		if(e.keyCode === 70 && keys.shift && keys.ctrl)
 		{
